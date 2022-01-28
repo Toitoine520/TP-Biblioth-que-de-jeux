@@ -1,0 +1,254 @@
+
+
+body{
+    margin: 0;
+    font-family: "Arial" ;
+    overflow-x: hidden;
+}
+
+/* HAUT DE PAGE */
+header{
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: #ddd;
+    color: rgb(51, 45, 109);
+    padding: 20px;
+}
+
+header .titreDesc{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .blockTitreSite{
+    width: 80%;
+    text-align: center;
+}
+
+header .logo{
+    max-width: 100px;
+    max-height: 100px;
+}
+
+header .logo img{
+    max-height: 80px;
+    width: auto;
+    padding: 10px;
+}
+
+
+header .blockDescSite{
+    text-align: center;
+}
+/*FIN HAUT DE PAGE */
+
+/* SECTION PRINCIPALE */
+/* MENU PRINCIPAL */
+.sectionMenuPrincipal{
+    background-color:rgb(51, 45, 109);
+    padding: 50 0;
+    margin: 0 auto;
+}
+
+.sectionMenuPrincipal .blockMenuPrincipal{
+    display: flex;
+    justify-content: space-around;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.sectionMenuPrincipal .blockMenuPrincipal .Recherche{
+    width: 80%;
+}
+.sectionMenuPrincipal .blockMenuPrincipal .Recherche input{
+    width: min( 40%, 350px);
+}
+
+    /*FIN MENU PRINCIPAL */
+    
+main{
+    background-color: rgb(224, 224, 224);
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 500px;
+    padding: 20px;
+}
+
+main a{
+    padding:0;
+}
+
+main .chargement{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(51, 45, 109);
+    /* background-image: repeating-linear-gradient(to bottom, rgb(51, 45, 109) 1%,rgb(51, 45, 109) 20%,white 21%, white 40%); */
+    border: solid black 2px;
+    animation: loaderAnime infinite 4.5s linear;
+    position: absolute;
+}
+
+main .chargement:before{
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    background-image: radial-gradient(transparent 0%);
+}
+
+@keyframes loaderAnime{
+    0%{
+        transform: translate(0px, 150px) rotate(0deg);
+
+    }
+
+    10%{
+        transform: translate(100px, 150px);
+    }
+
+/* SAUT */
+    15%{
+        transform: translate(150px, 100px); 
+    }
+
+    18%{
+        border-radius: 0;
+    }
+
+    20%{
+        border-radius: 50%;
+        transform: translate(200px, 150px); 
+    }
+    
+    21%{
+        transform: translate(200px, 150px) rotate(0deg); 
+    }
+    
+
+
+    100%{
+        border-radius: 50%;
+        transform: translate(800px, 150px) rotate(450deg);
+    }
+}
+
+
+main .sectionJeux{
+    width: 100%;
+    height: 100%;
+}
+
+main .sectionJeux .divJeux{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+main .sectionJeux .divJeux .divJeu{
+    width: 30%;
+    margin-top: 50px;
+    padding-top: 50px;
+    text-align: center;
+    transition-duration: 0.5s;
+    border: solid rgb(51, 45, 109) 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+main .sectionJeux .divJeux .divJeu:hover{
+    cursor: pointer;
+    background-color: rgba(211, 211, 211, 0.527);
+}
+
+main .sectionJeux .divJeux .divJeu img{
+    max-width: 200px;
+}
+
+main .sectionJeux .divFicheJeu .divficheinfos .ligne1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+}
+
+main .sectionJeux .divFicheJeu .divficheinfos .ligne1 .Image img{
+    max-width: 200px;
+}
+
+main .sectionJeux .divFicheJeu .divficheinfos .ligne1 .Nom p{
+    font-size: 1.5rem;
+}
+
+main .sectionJeux .divFicheJeu .divficheinfos .ligne2{
+    /* max-width: fit-content; */
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    background-color: rgb(187, 187, 187);
+}
+
+main .sectionJeux .divFicheJeu .divficheinfos .sousTitre{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 80px;
+}
+
+main .sectionJeux .divFicheJeu .divficheinfos .sousTitre{}
+
+main .sectionJeux .divFicheJeu .divficheinfos .DescLongue h2{
+    font-size: 1.2em;
+    padding-top: 20px;
+}
+
+main .sectionJeux .divFicheJeu .divficheinfos .DescLongue,
+main .sectionJeux .divFicheJeu .divficheinfos .DescCourte{
+    max-width: 75%;
+    margin: auto;
+}
+
+.blockBouton {
+    text-align: center;
+}
+.blockBouton > button{
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+.boutonAjouterFavoris{
+    
+}
+
+img{
+    /* max-width: 30%; */
+    /* max-height: 30%; */
+}
+
+main .sectionJeux .divFicheJeu{
+    /* max-width: 30%; */
+}
+
+
+/*FIN SECTION PRINCIPALE */
+    
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(51, 45, 109);
+    color: white;
+    padding: 20px;
+}
+
+footer a{
+    /* color: #3a7fc0; */
+    color: white;
+}

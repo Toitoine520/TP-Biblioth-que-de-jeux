@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+        <title>Recherche de Jeux</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/style.css">
+        <script type="module" src="js/fallbackFetchGiantBomb.js"></script>
+        <script type="module" src="js/AppRechercheJeux.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="logo">
+                <img src="Logo-couleur.png" alt="Logo"/>
+            </div>
+            <div class="titreDesc">
+                <div class="blockTitreSite">
+                    <h1 class="titreSite">Game Search Utlimate</h1>
+                </div>
+                <div class="blockDescSite">
+                    <p class="descSite">
+                        Trouvez tous les jeux dont vous avez besoin parmis plus de 250 000 disponibles.
+                    </p>
+                </div>
+            </div>
+
+        </header>
+
+        <section class="sectionMenuPrincipal">
+            <div class="blockMenuPrincipal">
+                <div class="Recherche">
+                    <input type="text" class="recherche">
+                    <button class="boutonRecherche">Rechercher</button>
+                </div>
+                <button class="boutonFavoris">Favoris</button>
+            </div>
+        </section>
+
+        <main>
+            <section class="sectionJeux">
+                <p>
+                    Les jeux recherchés seront affichés ici
+                </p>
+
+            <!--    <div class="chargement"></div> A RETIRER-->
+                </section>
+        </main>
+
+        <footer>
+            <div class="auteur">
+                <p class="nom"> Antoine LE NAGARD</p>
+                <p class="mail">antoine.le-nagard@supdevinci-edu.fr</p>
+            </div>
+            <div class="lienGiantBomb">
+                <p>
+                    Produit avec l'API <a href="https://www.giantbomb.com/" target="_blank">Giant Bomb</a>
+                </p>
+            </div>
+            <div class="lienDeVinci">
+                <p>
+                    Au sein de l'école <a href="https://www.supdevinci.fr/" target="_blank">SupDeVinci RENNES</a>
+                </p>
+            </div>
+        </footer>       
+
+        
+    </body>
+</html>
