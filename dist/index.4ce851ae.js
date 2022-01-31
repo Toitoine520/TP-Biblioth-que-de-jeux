@@ -591,7 +591,7 @@ class DAO {
         return !this.#mapFavoris.has(jeu);
     }
     static ajouterAMesFavoris(jeu) {
-        const jeuFavoris = new _jeuDefault.default(jsonJeu);
+        const jeuFavoris = new _jeuDefault.default(jeu.jsonJeu);
         this.#mapFavoris.set(jeuFavoris);
         this.#sauvegarderMesFavoris();
     }
@@ -608,9 +608,9 @@ class DAO {
         if (!json) return this.#mapFavoris;
         const tableauParse = JSON.parse(json);
         tableauParse.forEach((jeuObj)=>{
-            const jeuFavoris = new _jeuDefault.default(jeu.jsonJeu);
-            jeuFavoris.nom = jeuObj.nom;
-            this.#mapFavoris.set(jeuFavoris.nom, jeuFavoris);
+        // const jeuFavoris = new Jeu(jeuObj.jsonJeu);
+        // jeuFavoris.nom = jeuObj.nom;
+        // this.#mapFavoris.set(jeuFavoris.nom, jeuFavoris);
         });
         return this.#mapJeux;
     }

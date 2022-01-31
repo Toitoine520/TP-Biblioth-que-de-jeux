@@ -55,7 +55,7 @@ export default class DAO{
     }
 
     static ajouterAMesFavoris(jeu){
-        const jeuFavoris = new Jeu(jsonJeu);
+        const jeuFavoris = new Jeu(jeu.jsonJeu);
 
         this.#mapFavoris.set(jeuFavoris);
 
@@ -84,11 +84,11 @@ export default class DAO{
         const tableauParse = JSON.parse(json);
 
         tableauParse.forEach(jeuObj=>{
-            const jeuFavoris = new Jeu(jeu.jsonJeu);
+            // const jeuFavoris = new Jeu(jeuObj.jsonJeu);
 
-            jeuFavoris.nom = jeuObj.nom;
+            // jeuFavoris.nom = jeuObj.nom;
 
-            this.#mapFavoris.set(jeuFavoris.nom, jeuFavoris);
+            // this.#mapFavoris.set(jeuFavoris.nom, jeuFavoris);
         });
 
         return this.#mapJeux;
